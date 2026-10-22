@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "output_sha256",
+    "submitted_source_manifest",
+    "frozen_test_identity_and_groups",
+    "metrics_and_log_loss",
+    "component_bootstrap_intervals",
+    "release_and_completion_records"
+  ],
+  "date": "2026-10-22",
+  "files_sha256": {
+    "test_group_predictions.csv": "5a8eef5cb46b9b31e254d9a802638348a62b410cf7642827b387dff044abf048",
+    "test_photo_predictions.csv": "8f53d913ee478977623141327549b6b87317e7d1e70050e61fb3824ab275eb9d",
+    "test_summary.json": "813b5ce08e07bbc1d065b25894a1b9e9cc37e8e4d716b75a78eeb5ac2d9248c8"
+  },
+  "job_id": "4429740.pbs-7",
+  "model_inference": "NOT_RUN",
+  "original_split_table_sha256": "b4a5ed7166be856f2f8758a6fb7d3e6660b8670bd8cf8545ff307ace501d3789",
+  "reference_labels": "Community identifications; not independently verified species identities.",
+  "status": "PASS",
+  "test_images_opened": 0
+}

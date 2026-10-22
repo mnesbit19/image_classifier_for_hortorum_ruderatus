@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "cohorts_file": "config/cohorts_v1.json",
+  "qc": {
+    "directory": "data/derived/quality/qc_20261016T101009Z_537cdc8d",
+    "job_id": "4384015.pbs-7",
+    "summary_sha256": "8820387ce1ccb765de677247e8d830a0fedb017b4e5c95c26549a0eaf211b5cf",
+    "files_sha256": {
+      "check_images.py": "d122a1b4a53cf3e0a7e5c13057d85ef989897a298dd1eb664587a110916cd240",
+      "cohorts.json": "68d53d8184079c0eb526a98d824fd9602aeb01140343a7c4d7873270ff56c350",
+      "duplicate_candidates.json": "870a82f5e559ebf7d8d8d52a8dddbcd597253062efa44f2371a12d0b141f886b",
+      "observation_photos.csv": "15c48b24d5c7a4f393e87b453e1f814fefdf19a93ae06f9161d86ee2510f239d",
+      "photo_qc.csv": "544c24b128480d29eadc08b58808920f2514b01ef9fa8228fb4ba7b3c195dae3",
+      "report_download.py": "cbc9cc541c9f627fb0fdafeea6507cfe08b329f60c01ca49eb0be7afc041aafa",
+      "sources/hortorum/code_snapshot.py": "7c50c544cf2c5620b870f9761696aa8904dbefa67d78897b69991ad2cf254261",
+      "sources/hortorum/config.json": "0a23a49bc15dd3a9dd9064f4bc4938fb0c204383c29d8ae746e985db6782e0ae",
+      "sources/hortorum/excluded.csv": "22a758f8a5e3f44a71031023e1ec359416eeb7ae0867aaece82a5534d7ee2ea3",
+      "sources/hortorum/photos.csv": "24c71baffebb6de08366c75435d800d4e27ee0b31894eb63b7ea52bac7bf2a11",
+      "sources/hortorum/plan.json": "7f5bcb345b978b68220da17bc006e10ddbf4690226ac267bfc3d357a36227713",
+      "sources/hortorum/summary.json": "325ddbdfa3b754c1ed33c383fcf377c90dd0535d27845fb848ad69c2a37a9d43",
+      "sources/ruderatus/code_snapshot.py": "7c50c544cf2c5620b870f9761696aa8904dbefa67d78897b69991ad2cf254261",
+      "sources/ruderatus/config.json": "0a23a49bc15dd3a9dd9064f4bc4938fb0c204383c29d8ae746e985db6782e0ae",
+      "sources/ruderatus/excluded.csv": "e93f620bbd6485b15ae351ebd45eb07a895df001889a656cc60eb5b1c289ce4e",
+      "sources/ruderatus/photos.csv": "60419df7d9ff0fa1fbd86d79c14c015c639dce5937c4a662dba7f2b6abd63fb8",
+      "sources/ruderatus/plan.json": "2e939f1f8610dfcd74912e4739c83b6be89976615cffc28f99c534093dee4687",
+      "sources/ruderatus/summary.json": "c94032b188e8adeb85548d59956d4826c023d9b986601b4027329e99a24f794a",
+      "summary.json": "8820387ce1ccb765de677247e8d830a0fedb017b4e5c95c26549a0eaf211b5cf"
+    }
+  },
+  "local_triage": {
+    "file": "reports/visual_qc_review_4384015_v1/image_screening.csv",
+    "sha256": "fc5d55891ef79bdec78f6df783bc7f66b201bc95e26c65bb8e790e89b81516dc"
+  },
+  "near_duplicates": {
+    "algorithm": "dct63_dhash64_v1",
+    "phash_radius": 6,
+    "dhash_radius": 10,
+    "center_crop_fraction": 0.75,
+    "min_luma_stddev": 2.0,
+    "max_candidate_pairs": 100000
+  },
+  "decision_policy": "Candidates and editable curation seed only; no automatic merge, exclusion, relabelling or split assignment."
+}

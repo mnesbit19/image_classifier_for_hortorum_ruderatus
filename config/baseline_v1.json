@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "version": "baseline_v1",
+  "dataset_dir": "data/splits/baseline_v1",
+  "dataset_sha256": {
+    "links.csv": "a363bbad19f3951b6ee3fed29ac5d8f38cd50e2f371fd457c3bf9a76d58f7125",
+    "OUTPUT_SHA256.json": "d0fb065894a996f4d65acca2d6f5d70d695449ec6d70fcff78a9fb8c9e8e1f72",
+    "photos.csv": "b4a5ed7166be856f2f8758a6fb7d3e6660b8670bd8cf8545ff307ace501d3789",
+    "provenance.json": "0af49632d08644efe5b4a0404a9284a386228c0123a85eab741e6ba3e8540b0e",
+    "split_config.json": "d36c3c867b67e18ffff5126a5c6ff90b073e8dcebf80d34d90a9344ff220c0b7",
+    "summary.json": "7c430641a80b2d9d7604e497dd83003b08bf2c2920284cc7449c3bc9be59a56e"
+  },
+  "classes": {
+    "Bombus hortorum": 0,
+    "Bombus ruderatus": 1
+  },
+  "architecture": "efficientnet_b0",
+  "pretrained_weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+  "preprocess": {
+    "name": "exif_rgb_full_frame_pad_v1",
+    "size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "interpolation": "bicubic",
+    "padding_rgb": [
+      124,
+      116,
+      104
+    ]
+  },
+  "seed": 42,
+  "batch_size": 32,
+  "num_workers": 2,
+  "weight_decay": 0.0001,
+  "phases": [
+    {
+      "name": "classifier",
+      "epochs": 3,
+      "learning_rate": 0.001
+    },
+    {
+      "name": "fine_tune",
+      "epochs": 7,
+      "learning_rate": 0.0001
+    }
+  ],
+  "sampling": "class_balanced_then_observation_exact_group_balanced_with_replacement",
+  "augmentations": {
+    "horizontal_flip_probability": 0.5,
+    "brightness": [
+      0.9,
+      1.1
+    ],
+    "contrast": [
+      0.9,
+      1.1
+    ],
+    "saturation": [
+      0.9,
+      1.1
+    ],
+    "crop": false
+  },
+  "selection": "maximum_validation_observation_exact_group_balanced_accuracy_then_minimum_log_loss",
+  "decision_threshold": 0.5,
+  "threshold_policy": "fixed_two_class_argmax_ties_hortorum_no_calibration_claim",
+  "test_policy": "sealed_until_separate_evaluation",
+  "software": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "Pillow": "12.3.0",
+    "numpy": "2.2.6",
+    "wheel_index": "https://download.pytorch.org/whl/cu118"
+  },
+  "source_labels": "iNaturalist community labels; no DNA benchmark",
+  "source_hortorum_history": "INCOMPLETE; budget_limited_saved_photos_for_curation",
+  "scope": "Full-frame two-species noncommercial research proof of concept; no calibrated abstention threshold."
+}

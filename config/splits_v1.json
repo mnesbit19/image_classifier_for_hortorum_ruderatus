@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "version": "baseline_v1",
+  "input_manifest": "data/review/initial_pool_20261019_v1/initial_pool_manifest.csv",
+  "input_sha256": "fc30f3250a6a7dab4ecdbf4aa0b3b70b95aafe9bfadfd752229c82e6614f1bf4",
+  "expected_photos": 14892,
+  "expected_links": 14894,
+  "expected_observations": 6350,
+  "output_dir": "data/splits/baseline_v1",
+  "seed": 42,
+  "fractions": {"train": 0.8, "validation": 0.1, "test": 0.1},
+  "algorithm": "observer_component_greedy_class_observation_balance_v1",
+  "constraints": ["observer_id", "observation_id", "observation_group_id", "photo_id", "sha256", "exact_match_group_ids"]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "cohort_id": "saved_photos_20261016_v1",
+  "decision": "User accepted existing downloads on 2026-10-16; acquisition is closed. These are source cohorts for curation, not training splits.",
+  "classes": {"Bombus hortorum": 0, "Bombus ruderatus": 1},
+  "sources": [
+    {
+      "name": "ruderatus",
+      "species": "Bombus ruderatus",
+      "dataset": "ruderatus_export_795893_v1",
+      "attempt": "20261014T124914Z_6a0fdd4f",
+      "job_id": "4347766.pbs-7",
+      "accept_budget_limited": false,
+      "plan_sha256": "2e939f1f8610dfcd74912e4739c83b6be89976615cffc28f99c534093dee4687",
+      "download_code_sha256": "7c50c544cf2c5620b870f9761696aa8904dbefa67d78897b69991ad2cf254261",
+      "expected_counts": {"observations_with_downloads": 1091, "unique_photo_ids": 2488, "photo_observation_links": 2488}
+    },
+    {
+      "name": "hortorum",
+      "species": "Bombus hortorum",
+      "dataset": "hortorum_export_797562_v1",
+      "attempt": "20261015T133905Z_fe57ccfa",
+      "job_id": "4373551.pbs-7",
+      "accept_budget_limited": true,
+      "plan_sha256": "7f5bcb345b978b68220da17bc006e10ddbf4690226ac267bfc3d357a36227713",
+      "download_code_sha256": "7c50c544cf2c5620b870f9761696aa8904dbefa67d78897b69991ad2cf254261",
+      "expected_counts": {"observations_with_downloads": 5317, "unique_photo_ids": 12638, "photo_observation_links": 12641}
+    }
+  ]
+}

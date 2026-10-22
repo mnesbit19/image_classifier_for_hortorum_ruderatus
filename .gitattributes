@@ -1,0 +1,8 @@
+* text=auto
+*.sh text eol=lf
+*.pbs text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.sha256 text eol=lf

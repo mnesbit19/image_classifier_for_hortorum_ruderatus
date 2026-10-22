@@ -1,0 +1,3 @@
+# We pin the image/numerical libraries after installing the official CUDA wheels.
+Pillow==12.3.0
+numpy==2.2.6

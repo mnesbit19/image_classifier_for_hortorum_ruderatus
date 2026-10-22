@@ -1,0 +1,86 @@
+{
+  "baseline_config_sha256": "16a3864edfbcc7f735e7824bcb4ce3dc591bd426c20223b91243084a3cf9f504",
+  "batch_size": 32,
+  "best_epoch": 3,
+  "bootstrap_replicates": 2000,
+  "checkpoint_sha256": "16df795738b138e2414b1ef96deb31e83d26cb657119adb76d37742affc820f9",
+  "classes": {
+    "Bombus hortorum": 0,
+    "Bombus ruderatus": 1
+  },
+  "decision_threshold": 0.5,
+  "device": "cpu",
+  "expected_test_counts": {
+    "components": 333,
+    "evaluation_groups": 633,
+    "observations": 635,
+    "photos": 1315,
+    "species_photos": {
+      "Bombus hortorum": 1067,
+      "Bombus ruderatus": 248
+    }
+  },
+  "model_selection": "Frozen epoch-3 checkpoint selected on validation in completed training job.",
+  "num_workers": 2,
+  "preprocess": {
+    "interpolation": "bicubic",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "name": "exif_rgb_full_frame_pad_v1",
+    "padding_rgb": [
+      124,
+      116,
+      104
+    ],
+    "size": 224,
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "release_marker_dir": "runs/evaluation/final_test_baseline_v1.released",
+  "schema_version": 1,
+  "seed": 42,
+  "test_policy": "Evaluate this checkpoint and original fixed rule once; no test-based model or threshold selection.",
+  "training_files_sha256": {
+    "artifacts/OUTPUT_SHA256.json": "079fa6fe0e0408ab414b842f8886bb0fa3eebab9b9cbd3225ad61a3b5b4a36ca",
+    "artifacts/best.pt": "16df795738b138e2414b1ef96deb31e83d26cb657119adb76d37742affc820f9",
+    "artifacts/config.json": "b29abc854ed175f188d70e84a8fd201112b6d8dec3436173d28a436a8f0cf65d",
+    "artifacts/epochs.jsonl": "e9074569ba5407337c74b170271472761d8369edbe664b0ec6c1af6c5481d24a",
+    "artifacts/image_preflight.json": "6fc135192e0339648f8bbdf0758ab0d8b6eb4e8f400e80175054dc6cd1062726",
+    "artifacts/last.pt": "3d77132dc68273bcdf772fae7f1bbd49d783d3c0ebcb4a7cec04dde0f618c668",
+    "artifacts/runtime.json": "e3d6b042f618e2ffab7daf6f4b04b5afd7853c8ba2ba3d6db6988b5b126bbe2f",
+    "artifacts/source_sha256.json": "e70203bde767d136939b5e1c1f4e23a0ce5965e2404784605080b76089cf7f03",
+    "artifacts/split_summary.json": "7c430641a80b2d9d7604e497dd83003b08bf2c2920284cc7449c3bc9be59a56e",
+    "artifacts/summary.json": "c96f8608baca0746d806fe30b8699adb5106de09cb3fcc8bc263110931b3ca59",
+    "artifacts/validation_group_predictions.csv": "0a29a1964997a0116c0919c662a318445c785252cbaa56f508ec7af5dde0bc03",
+    "artifacts/validation_photo_predictions.csv": "58769bfcd8135a0a6a7bc42cd5eaace803025a0daf6178ebc9294f598dae34d2",
+    "gpu_inventory.txt": "2bfc6d40efc14a40809f1c767e6ad6c4f02e0428c7082fe4a905cfa06ba0d872",
+    "gpu_smoke/gpu_smoke_report.json": "1978a604abfa8ae7dfad7343d56837ca1051d31b4fe05fcf5eda6288991a7272",
+    "job.log": "1b2f81f43b5103d1e478aad6519e3d6ac3e6e37539e197f139e09437e9a45205",
+    "job_id.txt": "dc3cc914845792f041d690b1b5515d221d33a4b7c93616d48759144f575a94ef",
+    "packages.txt": "c00dff61908817201dac3590a2e1f78836fc51a737ee3edca39738b4db28b4db",
+    "pbs.log": "91ec1ce6c7f9029eb2e0122f1c7cd78a76f09fb3a5fa07ce1adc6ccac4798456",
+    "qsub_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "submitted_source.sha256": "77f08eaa3ee7adeeda35e0c281dadb09503958ee05a3235f675e5f5107607c60"
+  },
+  "training_job_id": "4420513.pbs-7",
+  "training_run_dir": "runs/baseline/baseline_20261020T083107Z_AvI05l",
+  "uncertainty_scope": "Observer/exact split-component bootstrap; does not establish DNA identity or represent field prevalence.",
+  "validation_parity_absolute_tolerance": 0.0001,
+  "validation_parity_photo_ids": [
+    "7577848",
+    "7667892",
+    "8001049",
+    "21178925",
+    "1248274",
+    "1248275",
+    "13537680",
+    "13537685"
+  ],
+  "version": "final_test_baseline_v1"
+}

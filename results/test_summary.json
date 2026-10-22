@@ -1,0 +1,124 @@
+{
+  "best_epoch": 3,
+  "checkpoint_sha256": "16df795738b138e2414b1ef96deb31e83d26cb657119adb76d37742affc820f9",
+  "decision_threshold": 0.5,
+  "device": "cpu",
+  "elapsed_seconds_after_release": 256.2446551019675,
+  "group_uncertainty": {
+    "clusters": 333,
+    "intervals": {
+      "accuracy": {
+        "lower": 0.5990830639220822,
+        "upper": 0.6778139848383112
+      },
+      "balanced_accuracy": {
+        "lower": 0.6176542452012419,
+        "upper": 0.7131117674920311
+      },
+      "hortorum_f1": {
+        "lower": 0.7014747770480775,
+        "upper": 0.7772188660149304
+      },
+      "hortorum_precision": {
+        "lower": 0.8785025423969548,
+        "upper": 0.9453309185057944
+      },
+      "hortorum_recall": {
+        "lower": 0.5749965341959334,
+        "upper": 0.6714906674604286
+      },
+      "log_loss": {
+        "lower": 0.5983787186546853,
+        "upper": 0.6597611169046129
+      },
+      "ruderatus_f1": {
+        "lower": 0.2999938574938575,
+        "upper": 0.4841800356506238
+      },
+      "ruderatus_precision": {
+        "lower": 0.19379503766786768,
+        "upper": 0.35608511849111824
+      },
+      "ruderatus_recall": {
+        "lower": 0.611733746130031,
+        "upper": 0.7963041431261769
+      }
+    },
+    "level": 0.95,
+    "method": "unstratified_split_component_percentile_bootstrap",
+    "replicates_missing_one_species": 0,
+    "replicates_requested": 2000,
+    "replicates_used": 2000,
+    "seed": 42,
+    "zero_predicted_class_precision": "defined_as_zero_as_in_point_metrics"
+  },
+  "interpretation": "Held-out agreement with source community labels; no DNA-ground-truth or calibrated-certainty claim.",
+  "model_update": "NONE",
+  "pbs_job_id": "4429740.pbs-7",
+  "status": "FINAL_TEST_COMPLETE",
+  "test": {
+    "observation_exact_group": {
+      "accuracy": 0.6382306477093207,
+      "balanced_accuracy": 0.6686958874458875,
+      "confusion_true_rows_predicted_columns": [
+        [
+          329,
+          199
+        ],
+        [
+          30,
+          75
+        ]
+      ],
+      "log_loss": 0.6302357367910032,
+      "n": 633,
+      "per_class": {
+        "0": {
+          "f1": 0.741826381059752,
+          "precision": 0.9164345403899722,
+          "recall": 0.6231060606060606,
+          "support": 528
+        },
+        "1": {
+          "f1": 0.39577836411609496,
+          "precision": 0.2737226277372263,
+          "recall": 0.7142857142857143,
+          "support": 105
+        }
+      }
+    },
+    "photo": {
+      "accuracy": 0.629657794676806,
+      "balanced_accuracy": 0.6495355534056897,
+      "confusion_true_rows_predicted_columns": [
+        [
+          659,
+          408
+        ],
+        [
+          79,
+          169
+        ]
+      ],
+      "log_loss": 0.6539469382021024,
+      "n": 1315,
+      "per_class": {
+        "0": {
+          "f1": 0.7301939058171745,
+          "precision": 0.8929539295392954,
+          "recall": 0.6176194939081537,
+          "support": 1067
+        },
+        "1": {
+          "f1": 0.40969696969696967,
+          "precision": 0.292894280762565,
+          "recall": 0.6814516129032258,
+          "support": 248
+        }
+      }
+    }
+  },
+  "test_photos": 1315,
+  "threshold_selection": "NONE",
+  "training_job_id": "4420513.pbs-7"
+}

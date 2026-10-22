@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "project": "ml_rudvhort",
+  "stage": "09_first_baseline_prepared",
+  "hpc_project_root": "/rds/general/user/mln19/home/ml_rudvhort",
+  "data": {
+    "source": "iNaturalist",
+    "taxa": [
+      "Bombus hortorum",
+      "Bombus ruderatus"
+    ],
+    "taxon_ids": {
+      "Bombus hortorum": 121989,
+      "Bombus ruderatus": 133704
+    },
+    "geographic_scope": "pending_metadata_audit",
+    "initial_quality_grade": "research",
+    "initial_photo_license_allowlist": [
+      "cc0",
+      "cc-by",
+      "cc-by-nc"
+    ],
+    "intended_use": "noncommercial_research_proof_of_concept",
+    "check_each_photo_license": true,
+    "preserve_all_views_and_observation_ids": true,
+    "download_size": "original"
+  },
+  "classes": {
+    "Bombus hortorum": 0,
+    "Bombus ruderatus": 1
+  },
+  "baseline": {
+    "architecture": "efficientnet_b0",
+    "pretrained_weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+    "input_size": 224,
+    "candidate_later_sizes": [
+      384,
+      448
+    ],
+    "initial_training": "classifier_then_fine_tuning",
+    "seed": 42
+  },
+  "evaluation": {
+    "minimum_group": "observation_id",
+    "merge_duplicate_and_known_individual_groups": true,
+    "photographer_and_geographic_holdouts": "baseline_v1_observer_disjoint; geographic_isolation_not_established",
+    "final_test_locked_before_model_comparison": true,
+    "molecular_benchmark": "not_yet_available",
+    "abstention_threshold": null
+  }
+}

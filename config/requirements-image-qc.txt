@@ -1,0 +1,2 @@
+# We pin the image decoder for the HPC check; the job records installed versions.
+Pillow==12.3.0
