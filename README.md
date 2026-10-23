@@ -5,9 +5,9 @@ An image-classification experiment with two cryptic bumblebee species,
 
 I trained an ImageNet-pretrained EfficientNet-B0 on public iNaturalist photos
 to see how far a simple two-species classifier would get. On the held-out test,
-it reached **66.9% balanced accuracy** (reported 95% bootstrap interval
-61.8–71.3%). It made many false *ruderatus* calls: only **27.4% of those
-predictions agreed with the reference labels**.
+it reached 66.9% balanced accuracy (reported 95% bootstrap interval
+61.8–71.3%). It made many false *ruderatus* calls: only 27.4% of those
+predictions agreed with the reference labels.
 
 The reference labels are iNaturalist community
 identifications, not independently verified species identities. The photos
