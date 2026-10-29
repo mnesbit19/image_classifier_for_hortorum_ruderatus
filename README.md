@@ -16,6 +16,19 @@ but that did not establish that the bees were correctly identified. The results
 measure agreement with those labels. They cannot tell us how much of the
 disagreement comes from the model and how much comes from errors in the labels.
 
+## Reproduce the results
+
+This repository contains the source and saved results of a completed research
+prototype. From the repository root, reproduce the reported metrics and
+bootstrap intervals with:
+
+```bash
+python tools/reproduce_results.py
+```
+
+This uses Python's standard library and the saved prediction tables. It does
+not require photographs, model weights or PyTorch, and does not run the model.
+
 ## Tests
 
 The selected dataset contained 14,892 photos: 2,416 labelled *ruderatus* and
@@ -24,7 +37,7 @@ duplicates were kept within one split. There were 12,108 training photos,
 1,469 validation photos and 1,315 test photos. The model used full photos resized
 and padded to 224 × 224 pixels, without manual bee crops.
 
-Ten training sets were run. The set-3 checkpoint was selected on validation
+Ten training epochs were run. The epoch-3 checkpoint was selected on validation
 balanced accuracy, then evaluated once on the held-out test with the original
 decision rule. No model or threshold was selected using the test results.
 
@@ -58,9 +71,10 @@ confusion matrix, methods, data provenance and limitations.
 - `code/predict_photo.py`: prediction for one photo using a saved checkpoint.
 - `code/evaluate_baseline.py`: the original held-out evaluation and bootstrap.
 
-The scripts and configurations record the experiment as run. Training and
-evaluation require the original data and run artifacts; this code does
-not include photographs, model weights or a ready-to-use identification service.
+The training and evaluation scripts are archived as run, including their original
+HPC-specific paths. They require the original data and run artifacts, which are
+not distributed here. Photographs and trained model weights are not included;
+the predictor therefore requires a compatible checkpoint supplied separately.
 The original one-time test must not be rerun to choose a better model.
 
 Training used Python 3.12.11, PyTorch 2.7.1, torchvision 0.22.1, Pillow 12.3.0
@@ -90,12 +104,7 @@ pretrained weights.
 
 Recomputing the metrics and bootstrap
 from those saved predictions reproduced the reported results. The public
-results folder includes the predictions and summary. To reproduce the numbers
-without photographs, weights or PyTorch:
-
-```bash
-python tools/reproduce_results.py
-```
-
-This reads saved scores; it does not run the model again. The interval does not
-account for uncertain species labels.
+results folder includes the predictions and summary. The interval does not
+account for uncertain species labels. The general project configuration omits
+obsolete workflow-status fields; the experiment settings remain in the versioned
+baseline and test configurations.

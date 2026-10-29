@@ -1,7 +1,6 @@
 {
   "schema_version": 1,
   "project": "ml_rudvhort",
-  "stage": "09_first_baseline_prepared",
   "hpc_project_root": "/rds/general/user/mln19/home/ml_rudvhort",
   "data": {
     "source": "iNaturalist",
@@ -13,7 +12,6 @@
       "Bombus hortorum": 121989,
       "Bombus ruderatus": 133704
     },
-    "geographic_scope": "pending_metadata_audit",
     "initial_quality_grade": "research",
     "initial_photo_license_allowlist": [
       "cc0",
